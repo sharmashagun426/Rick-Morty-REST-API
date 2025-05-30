@@ -29,6 +29,7 @@ export default function CharacterList() {
       {
         header: 'Image',
         accessorKey: 'image',
+        id: 'image',
         cell: info => (
           <img
             src={info.getValue() as string}
@@ -40,6 +41,7 @@ export default function CharacterList() {
       {
         header: 'Name',
         accessorKey: 'name',
+        id: 'name',
         cell: info => (
           <span
             className={styles.characterLink}
@@ -49,11 +51,11 @@ export default function CharacterList() {
           </span>
         ),
       },
-      { header: 'Status', accessorKey: 'status' },
-      { header: 'Species', accessorKey: 'species' },
-      { header: 'Gender', accessorKey: 'gender' },
-      { header: 'Origin', accessorFn: row => row.origin.name },
-      { header: 'Location', accessorFn: row => row.location.name },
+      { header: 'Status', accessorKey: 'status', id:'status', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Species', accessorKey: 'species', id:'status', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Gender', accessorKey: 'gender', id:'status', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Origin', accessorFn: row => row.origin.name, id:'status', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Location', accessorFn: row => row.location.name, id:'status', cell: info=> <span>{info.getValue() as string }</span>},
     ],
     [navigate, styles.characterImage, styles.characterLink]
   );
