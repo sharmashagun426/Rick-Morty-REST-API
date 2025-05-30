@@ -79,7 +79,7 @@
   .characterLink {
     color: #3182ce;
     cursor: pointer;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-weight: 600;
     font-size: 1.04rem;
     transition: color 0.15s;

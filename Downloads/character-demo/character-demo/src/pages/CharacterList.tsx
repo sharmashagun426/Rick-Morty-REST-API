@@ -52,10 +52,10 @@ export default function CharacterList() {
         ),
       },
       { header: 'Status', accessorKey: 'status', id:'status', cell: info=> <span>{info.getValue() as string }</span>},
-      { header: 'Species', accessorKey: 'species', id:'status', cell: info=> <span>{info.getValue() as string }</span>},
-      { header: 'Gender', accessorKey: 'gender', id:'status', cell: info=> <span>{info.getValue() as string }</span>},
-      { header: 'Origin', accessorFn: row => row.origin.name, id:'status', cell: info=> <span>{info.getValue() as string }</span>},
-      { header: 'Location', accessorFn: row => row.location.name, id:'status', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Species', accessorKey: 'species', id:'species', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Gender', accessorKey: 'gender', id:'gender', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Origin', accessorFn: row => row.origin.name, id:'origin', cell: info=> <span>{info.getValue() as string }</span>},
+      { header: 'Location', accessorFn: row => row.location.name, id:'location', cell: info=> <span>{info.getValue() as string }</span>},
     ],
     [navigate, styles.characterImage, styles.characterLink]
   );
